@@ -50,7 +50,7 @@ titles = []
 welfares = []
 
 
-for i in range(3):
+for i in range():
     elems_companybox = driver.find_elements_by_class_name('cassetteRecruit__content')
     # 全体の取得
 
@@ -66,19 +66,19 @@ for i in range(3):
         item = elem_th.text
         welfares.append(item)
 
-    driver.find_element_by_class_name("pager__next").click()
+    driver.find_element_by_class_name("iconFont--arrowLeft").click()
     # 次のページをクリック
 
 df = pd.DataFrame()
 df['会社名'] = titles
 df['仕事内容'] = welfares
 
-df
+df.to_csv('求人情報.csv',index=False)
 
 # print(titles)
 # print(welfares)
 
-# driver.quit()
+driver.quit()
 
 # body > div.wrapper > div:nth-child(5) > form > div > nav:nth-child(51) > ul > li:nth-child(8)
 # body > div.wrapper > div:nth-child(5) > form > div > nav:nth-child(51) > ul > li:nth-child(1)
