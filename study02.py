@@ -24,7 +24,7 @@ DRIVER_PATH = '/Users/takito/Python/chromedriver'
 # DRIVER_PATH = '/Users/Kenta/Desktop/Selenium/chromedriver' # ローカル
 # DRIVER_PATH = '/app/.chromedriver/bin/chromedriver'        # heroku
 
-search_keyword = input('検索したいキーワードを入力してください' +':')
+search_keyword = input('検索したいキーワードを入力してください:')
 
 # ブラウザの起動
 driver = webdriver.Chrome(executable_path=DRIVER_PATH, chrome_options=options)
@@ -75,12 +75,4 @@ df['仕事内容'] = welfares
 
 df.to_csv('求人情報.csv',index=False)
 
-# print(titles)
-# print(welfares)
-
 driver.quit()
-
-# body > div.wrapper > div:nth-child(5) > form > div > nav:nth-child(51) > ul > li:nth-child(8)
-# body > div.wrapper > div:nth-child(5) > form > div > nav:nth-child(51) > ul > li:nth-child(1)
-# body > div.wrapper > div:nth-child(5) > form > div > nav:nth-child(51) > ul > li:nth-child(8)
-# body > div.wrapper > div:nth-child(5) > form > div > nav:nth-child(51) > ul > li.pager__next
